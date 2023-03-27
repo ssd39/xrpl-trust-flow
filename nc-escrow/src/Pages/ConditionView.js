@@ -43,7 +43,7 @@ export default () => {
         lgGraph.configure(location.state.gData);
         lgGraph.start()
       }else{
-        let socket = new WebSocket(`wss://xrpl-trust-flow.onrender.com/live_view/${params.id  || "one"}`);
+        let socket = new WebSocket(`wss://api.xrpltrust.xyz/live_view/${params.id  || "one"}`);
         socket.onopen = function (e) {};
   
         socket.onmessage = function (event) {
