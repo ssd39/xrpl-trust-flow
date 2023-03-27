@@ -31,6 +31,8 @@ function LandingPage() {
       auth.state().then((state) => {
         if (state.me) {
           console.log("success, me", JSON.stringify(state.me));
+          window.wallet_address = state.me.account
+          signedInHandler(state);
         }
       });
     });
