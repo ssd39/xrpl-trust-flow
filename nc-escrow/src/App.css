@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.Home_BG{
+  box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.5);
+}
+
+.TextSh{
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+}

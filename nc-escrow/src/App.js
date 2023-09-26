@@ -57,44 +57,54 @@ function LandingPage() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-sky-200 to-purple-200">
+    <div className="bg-black">
+      <div className="fixed flex items-center justify-center w-full h-full">
+          <video
+            autoPlay
+            loop
+            muted
+           
+            height={'90%'}
+            className="rounded-3xl Home_BG"
+          >
+            <source src="/xrpl.mp4" type="video/mp4" />
+            {/* Add additional source tags for other video formats */}
+          </video>
+       
+      </div>
       <div className="container mx-auto">
         <div className="flex flex-col justify-center items-center h-screen">
-        <motion.h1
+          <motion.h1
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="text-black text-5xl font-bold mb-4 relative"
+            className="text-white text-5xl font-bold mb-4 relative TextSh"
           >
             <motion.span
               initial={{ scale: 0 }}
               animate={{ scale: [1.2, 1, 1.2], rotate: [0, 10, -10, 0] }}
-              transition={{ repeatType:'loop', delay: 1, duration: 1, times: [0, 0.2, 0.8, 1] }}
-              className="inline-block relative"
+              transition={{
+                repeatType: "loop",
+                delay: 1,
+                duration: 1,
+                times: [0, 0.2, 0.8, 1],
+              }}
+              className="inline-block relative TextSh"
             >
-              X
+              D
             </motion.span>
-            rpTrustFlow
+            eFi Wires
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="flex items-center"
+            className="flex items-center z-50"
           >
-            <h1 className="text-slate-500 text-4xl font-bold mb-4">
-              Create Escrow on XRP Blockchain with No Code!
+            <h1 className="text-amber-200 text-3xl font-bold mb-4 TextSh">
+            Automate and Structure Your DeFi Investments
             </h1>
           </motion.div>
-          <motion.p
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-slate-500 text-xl mb-8 text-center"
-          >
-            Use our drag-and-drop interface to create custom escrow conditions
-            on the XRP blockchain without any coding skills required.
-          </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
